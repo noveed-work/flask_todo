@@ -17,7 +17,7 @@ pipeline{
         stage("Running the container"){
             steps{
                 sh 'docker run -d --name todo-app --network new-network todo-app:latest'
-                sh 'docker run -d -p 80:80 --name mynginx --network new-network mynginx:latest'
+                sh 'docker run -d -p 5500:80 --name mynginx --network new-network mynginx:latest'
             }
         }
     }
