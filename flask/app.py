@@ -16,7 +16,7 @@ class Todo(db.Model):
         return f"{self.task_id} - {self.title}"
 
 @app.route("/", methods=['GET','POST'])
-def hello_world():
+def home():
     if request.method=='POST':
         todo_title= request.form['title']
         todo_desc= request.form['desc']
